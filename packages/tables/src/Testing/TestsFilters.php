@@ -50,7 +50,7 @@ class TestsFilters
                 $data = ['isActive' => $data === true || $data === null];
             }
 
-            $this->set("tableFilters.{$filter->getName()}", $data);
+            $this->set("tableDeferredFilters.{$filter->getName()}", $data);
 
             return $this;
         };
