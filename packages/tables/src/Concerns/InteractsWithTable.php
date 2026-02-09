@@ -76,7 +76,7 @@ trait InteractsWithTable
             $this->normalizeTableFilterValuesFromQueryString($this->tableFilters);
         }
 
-        $this->getTableFiltersForm()->fill($this->tableFilters);
+        $this->getTableFiltersForm()->fill($this->tableFilters, shouldCallHydrationHooks: false);
 
         if ($this->getTable()->hasDeferredFilters()) {
             $this->tableFilters = $this->tableDeferredFilters;

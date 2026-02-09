@@ -209,7 +209,7 @@ trait HasFilters
 
     public function getTableFilterState(string $name): ?array
     {
-        return Arr::get($this->tableFilters, $this->parseTableFilterName($name));
+        return Arr::get($this->getTableFiltersForm()->getStateSnapshot(), $this->parseTableFilterName($name));
     }
 
     public function getTableFilterFormState(string $name): ?array
